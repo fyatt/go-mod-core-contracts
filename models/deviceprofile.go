@@ -16,7 +16,6 @@ package models
 
 import (
 	"encoding/json"
-	"fmt"
 )
 
 // DeviceProfile represents the attributes and operational capabilities of a device. It is a template for which
@@ -36,7 +35,6 @@ type DeviceProfile struct {
 
 // UnmarshalJSON implements the Unmarshaler interface for the DeviceProfile type
 func (dp *DeviceProfile) UnmarshalJSON(data []byte) error {
-	fmt.Println("unmarshal deviceprofile json-----------------------------------------!")
 	var err error
 	type Alias struct {
 		DescribedObject `json:",inline"`
